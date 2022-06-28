@@ -1,0 +1,44 @@
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/*=============================================
+	     Only for TwentyTwentyTwo theme
+=============================================*/
+.wp-site-blocks {
+  --wp--custom--spacing--outer: 0 !important;
+}
+
+/*=====  End of TwentyTwentyTwo theme section  ======*/
+.jumbotron {
+  position: relative;
+  z-index: 100;
+  height: var(--height);
+  width: var(--width);
+  background-color: var(--background-color);
+}
+.jumbotron .back-button {
+  position: fixed;
+  top: 5vh;
+  right: 5vw;
+  padding: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: var(--back-button-background);
+  border-radius: 50%;
+  border: none;
+  transition: transform var(--back-button-transition-easing) var(--back-button-transition-duration);
+  font-size: 24px;
+  transform: var(--back-button-transform);
+  opacity: 0;
+}
+.jumbotron .back-button.revealed {
+  transform: none;
+  opacity: 1;
+}
+.jumbotron .back-button svg {
+  fill: var(--back-button-icon-color);
+}
+
+/*# sourceMappingURL=style-index.css.map*/

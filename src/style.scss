@@ -1,0 +1,57 @@
+/*=============================================
+	     Only for TwentyTwentyTwo theme
+=============================================*/
+
+.wp-site-blocks {
+	--wp--custom--spacing--outer: 0 !important;
+}
+
+/*=====  End of TwentyTwentyTwo theme section  ======*/
+
+.jumbotron {
+	// Positioning
+	position: relative;
+	z-index: 100;
+
+	// Display and Box Model
+	height: var(--height);
+	width: var(--width);
+
+	// Others
+	background-color: var(--background-color);
+
+	.back-button {
+		// Positioning
+		position: fixed;
+		top: 5vh;
+		right: 5vw;
+
+		// Display and Box Model
+		padding: 16px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+
+		// Others
+		cursor: pointer;
+		background-color: var(--back-button-background);
+		border-radius: 50%;
+		border: none;
+		transition: transform var(--back-button-transition-easing)
+			var(--back-button-transition-duration);
+		font-size: 24px; // to remove later when a better icon solution is implemented
+
+		// initially the back-button is hidden
+		transform: var(--back-button-transform);
+		opacity: 0;
+
+		&.revealed {
+			transform: none;
+			opacity: 1;
+		}
+
+		svg {
+			fill: var(--back-button-icon-color);
+		}
+	}
+}

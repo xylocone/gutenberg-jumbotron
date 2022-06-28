@@ -1,0 +1,61 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "blaze/jumbotron",
+  "version": "0.1.0",
+  "title": "Jumbotron",
+  "category": "widgets",
+  "icon": "smiley",
+  "description": "A huge canvas that covers the page, and houses freeform sections of content",
+  "supports": {
+    "html": false,
+    "color": {
+      "background": true,
+      "text": false,
+      "gradients": false,
+      "link": false
+    }
+  },
+  "attributes": {
+    "height": {
+      "type": "string",
+      "default": "100vh"
+    },
+    "width": {
+      "type": "string",
+      "default": "100%"
+    },
+    "showNow": {
+      "type": "boolean",
+      "default": false
+    },
+    "backButtonBackground": {
+      "type": "string",
+      "default": "magenta"
+    },
+    "backButtonIconColor": {
+      "type": "string",
+      "default": "white"
+    },
+    "backButtonEnterFrom": {
+      "type": "string",
+      "default": "left"
+    },
+    "backButtonTransitionDuration": {
+      "type": "string",
+      "default": "0.6s"
+    },
+    "backButtonTransitionEasing": {
+      "type": "string",
+      "default": "ease-in"
+    },
+    "backButtonSize": {
+      "type": "string",
+      "default": "medium"
+    }
+  },
+  "textdomain": "jumbotron",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

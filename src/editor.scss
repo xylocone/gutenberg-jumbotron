@@ -1,0 +1,24 @@
+.jumbotron {
+	.block-editor-inner-blocks {
+		// Positioning
+		position: absolute;
+		bottom: 10vh;
+
+		// Display and Box Model
+		width: 100%;
+		padding: 32px;
+	}
+}
+
+/*=============================================
+=            Settings Sidebar styles          =
+=============================================*/
+
+/* To change with more specific selectors and better values for margin and padding */
+
+.block-editor-block-inspector fieldset {
+	margin: 8px;
+	padding: 8px;
+}
+
+/*=====  End of Settings Sidebar styles  ======*/
