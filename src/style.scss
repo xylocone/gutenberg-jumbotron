@@ -14,6 +14,7 @@
 	z-index: 100;
 
 	// Display and Box Model
+	padding: 32px;
 	height: var(--height);
 	width: var(--width);
 
@@ -53,5 +54,15 @@
 		svg {
 			fill: var(--back-button-icon-color);
 		}
+	}
+
+	.jumbotron__sections-wrapper {
+		// Positioning
+		position: relative;
+		z-index: 100;
+
+		// Display and Box Model
+		height: 100%;
+		width: 100%;
 	}
 }

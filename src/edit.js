@@ -15,7 +15,7 @@ import {
 	__experimentalRadioGroup as RadioGroup,
 	__experimentalRadio as Radio,
 } from "@wordpress/components";
-import { Icon, arrowLeft, comment } from "@wordpress/icons";
+import { Icon, arrowLeft } from "@wordpress/icons";
 import { useState } from "@wordpress/element";
 
 import "./editor.scss";
@@ -103,7 +103,9 @@ export default function Edit(props) {
 			>
 				<Icon icon={arrowLeft} size={utilVars.backButtonSize} />
 			</button>
-			<InnerBlocks allowedBlocks={["blaze/section"]} />
+			<div className="jumbotron__sections-wrapper">
+				<InnerBlocks allowedBlocks={["blaze/section"]} />
+			</div>
 			<SidebarSettings
 				{...props}
 				parentState={state}
