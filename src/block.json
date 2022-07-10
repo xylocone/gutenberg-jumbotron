@@ -25,7 +25,11 @@
 			"type": "string",
 			"default": "100%"
 		},
-		"showNow": {
+		"padding": {
+			"type": "string",
+			"default": "32px"
+		},
+		"isSectionOpened": {
 			"type": "boolean",
 			"default": false
 		},

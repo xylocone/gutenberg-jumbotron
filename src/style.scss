@@ -14,18 +14,21 @@
 	z-index: 100;
 
 	// Display and Box Model
-	padding: 32px;
+	box-sizing: border-box;
+	padding: var(--padding);
 	height: var(--height);
 	width: var(--width);
 
 	// Others
 	background-color: var(--background-color);
 
-	.back-button {
+	.jumbotron__back-button {
 		// Positioning
 		position: fixed;
 		top: 5vh;
 		right: 5vw;
+		z-index: 500;
+		pointer-events: none;
 
 		// Display and Box Model
 		padding: 16px;
@@ -38,18 +41,13 @@
 		background-color: var(--back-button-background);
 		border-radius: 50%;
 		border: none;
-		transition: transform var(--back-button-transition-easing)
+		transition: all var(--back-button-transition-easing)
 			var(--back-button-transition-duration);
 		font-size: 24px; // to remove later when a better icon solution is implemented
 
 		// initially the back-button is hidden
 		transform: var(--back-button-transform);
 		opacity: 0;
-
-		&.revealed {
-			transform: none;
-			opacity: 1;
-		}
 
 		svg {
 			fill: var(--back-button-icon-color);
@@ -64,5 +62,15 @@
 		// Display and Box Model
 		height: 100%;
 		width: 100%;
+	}
+}
+
+.jumbotron.is-section-opened {
+	// A child Section block has been opened
+
+	.jumbotron__back-button {
+		pointer-events: all;
+		transform: none;
+		opacity: 1;
 	}
 }

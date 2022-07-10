@@ -12,15 +12,18 @@
 .jumbotron {
   position: relative;
   z-index: 100;
-  padding: 32px;
+  box-sizing: border-box;
+  padding: var(--padding);
   height: var(--height);
   width: var(--width);
   background-color: var(--background-color);
 }
-.jumbotron .back-button {
+.jumbotron .jumbotron__back-button {
   position: fixed;
   top: 5vh;
   right: 5vw;
+  z-index: 500;
+  pointer-events: none;
   padding: 16px;
   display: inline-flex;
   align-items: center;
@@ -29,16 +32,12 @@
   background-color: var(--back-button-background);
   border-radius: 50%;
   border: none;
-  transition: transform var(--back-button-transition-easing) var(--back-button-transition-duration);
+  transition: all var(--back-button-transition-easing) var(--back-button-transition-duration);
   font-size: 24px;
   transform: var(--back-button-transform);
   opacity: 0;
 }
-.jumbotron .back-button.revealed {
-  transform: none;
-  opacity: 1;
-}
-.jumbotron .back-button svg {
+.jumbotron .jumbotron__back-button svg {
   fill: var(--back-button-icon-color);
 }
 .jumbotron .jumbotron__sections-wrapper {
@@ -46,6 +45,12 @@
   z-index: 100;
   height: 100%;
   width: 100%;
+}
+
+.jumbotron.is-section-opened .jumbotron__back-button {
+  pointer-events: all;
+  transform: none;
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style-index.css.map*/
