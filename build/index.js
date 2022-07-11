@@ -404,9 +404,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)("blaze/jumbotron", {
-  /**
-   * @see ./edit.js
-   */
   edit: _edit__WEBPACK_IMPORTED_MODULE_2__["default"],
   save: _save__WEBPACK_IMPORTED_MODULE_3__["default"]
 });
@@ -423,8 +420,77 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ Save)
 /* harmony export */ });
-function Save() {
-  return null;
+/* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_icons__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/icons */ "./node_modules/@wordpress/icons/build-module/icon/index.js");
+/* harmony import */ var _wordpress_icons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/icons */ "./node_modules/@wordpress/icons/build-module/library/arrow-left.js");
+
+
+
+
+function Save(_ref) {
+  let {
+    attributes
+  } = _ref;
+  const {
+    height,
+    width,
+    padding,
+    backButtonBackground,
+    backButtonIconColor,
+    backButtonTransitionDuration,
+    backButtonTransitionEasing,
+    backButtonEnterFrom,
+    backButtonSize,
+    style // this attribute is automatically added by the "supports" API
+
+  } = attributes;
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps.save({
+    className: "jumbotron"
+  }), {
+    style: getCSSvariables()
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("button", {
+    className: "jumbotron__back-button"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_icons__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    icon: _wordpress_icons__WEBPACK_IMPORTED_MODULE_4__["default"],
+    size: getBackButtonSize(backButtonSize)
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", {
+    className: "jumbotron__sections-wrapper"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InnerBlocks.Content, null)));
+
+  function getCSSvariables() {
+    return {
+      "--height": height,
+      "--width": width,
+      "--padding": padding,
+      "--background": style?.color.background,
+      "--back-button-background": backButtonBackground,
+      "--back-button-icon-color": backButtonIconColor,
+      "--back-button-transition-duration": backButtonTransitionDuration,
+      "--back-button-transition-easing": backButtonTransitionEasing,
+      "--back-button-transform": getBackButtonTransform(backButtonEnterFrom)
+    };
+  }
+
+  function getBackButtonSize(sizeString) {
+    return {
+      small: 20,
+      medium: 24,
+      large: 36
+    }[sizeString];
+  }
+
+  function getBackButtonTransform(entryDirection) {
+    return {
+      top: "translateY(-20vh)",
+      right: "translateX(20vw)",
+      bottom: "translateY(95vh)",
+      left: "translateX(-95vw)"
+    }[entryDirection];
+  }
 }
 
 /***/ }),
